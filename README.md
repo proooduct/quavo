@@ -9,8 +9,9 @@
 
 ## Steps
 
-1. Research on Parallax
-2. Select the theme: Music
-3. Site breakdown: Layout
-4. Downloaded Images: background & foreground transparent
-5. Fixed foreground image's resolution using Figma
+- Research on Parallax
+- Select the theme: Music
+- Site breakdown: Layout
+- Downloaded Images: background & foreground transparent
+- Fixed foreground image's resolution using Figma
+- New Properties: overflow-x, perspective, transform-style, object-fit, filter
