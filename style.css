@@ -1,0 +1,118 @@
+:root {
+  --quavo-dark: #070609;
+  --quavo-white: #ecddd6;
+  --quavo-contrast: #eb002a;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--quavo-white);
+  background: var(--quavo-dark);
+  font-family: "Syncopate", sans-serif;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+/* Main Section */
+main {
+  height: 100vh;
+  overflow-x: hidden; /* turn off horizontal scrolling bar */
+  perspective: 15px; /* turn on 3d space */
+}
+
+/* ------ Hero Section ------ */
+.hero {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: -1; /* content was hiding before this */
+  transform-style: preserve-3d; /* children maintain their position in 3D space. */
+}
+
+.hero h1 {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 3px 2px 3px var(--quavo-dark), -2px 5px 5px var(--quavo-contrast);
+}
+
+.hero img {
+  position: absolute; /* to stack images */
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* Prevents Stretch */
+}
+
+/* Foreground */
+.hero > img:nth-child(1) {
+  z-index: -1;
+  transform: translateZ(-5px) scale(1.4);
+}
+
+/* Background */
+.hero > img:nth-child(2) {
+  z-index: -2;
+  transform: translateZ(-20px) scale(2.5);
+}
+
+/* ------ Content Section ------ */
+.content {
+  background: var(--quavo-dark);
+  color: var(--quavo-white);
+  padding: 6rem 0;
+}
+
+.content p,
+.content h2 {
+  padding: 2rem 3rem;
+}
+
+/* Background Div */
+.bg-image {
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 3rem 0;
+  filter: sepia(); /* to add filter to our images */
+}
+
+.bg-image.a {
+  background-image: url("https://media.pitchfork.com/photos/64bad1313a4e400bc3c5bd31/3:2/w_4365,h_2910,c_limit/Quavo.jpg");
+}
+
+.bg-image.b {
+  background-image: url("https://www.billboard.com/wp-content/uploads/2021/04/Quavo-Performs-at-2019-BET-Experience-billboard-1548-1617647614.jpg");
+}
+
+.bg-image.c {
+  background-image: url("https://img.buzzfeed.com/buzzfeed-static/static/2023-07/27/18/campaign_images/3eae8a78ae92/quavo-on-grief-after-takeoffs-death-sometimes-i-c-3-410-1690483081-0_dblbig.jpg?resize=1200:*");
+}
+
+/* ------ Footer Section ------ */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: var(--quavo-contrast);
+  font-size: 1.5rem;
+}
